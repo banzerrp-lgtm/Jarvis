@@ -407,7 +407,7 @@ except Exception:
 # Disabled global Popen patch to allow interactive GUI applications (cmd, notepad, etc.) to show on screen.
 # Background CLI tasks already use CREATE_NO_WINDOW explicitly in actions/terminal_agent.py.
 
-LIVE_MODEL          = "models/gemini-2.0-flash-native-audio-preview"
+LIVE_MODEL          = "models/gemini-2.5-flash-native-audio-preview-12-2025-native-audio-preview"
 CHANNELS            = 1
 SEND_SAMPLE_RATE    = 16000
 RECEIVE_SAMPLE_RATE = 24000
@@ -1773,7 +1773,7 @@ TOOL_DECLARATIONS = [
                 },
                 "model": {
                     "type": "STRING",
-                    "description": "Opcional. Modelo a usar, por defecto google/gemini-1.5-flash"
+                    "description": "Opcional. Modelo a usar, por defecto google/gemini-2.5-flash"
                 }
             },
             "required": ["query"]
@@ -2893,7 +2893,7 @@ class JarvisLive:
                         _TOOL_EXECUTOR, 
                         lambda: openrouter_agent(
                             query=args.get("query", ""),
-                            model=args.get("model", "google/gemini-1.5-flash")
+                            model=args.get("model", "google/gemini-2.5-flash")
                         )
                     )
                     result = r or "Error al procesar con OpenRouter."

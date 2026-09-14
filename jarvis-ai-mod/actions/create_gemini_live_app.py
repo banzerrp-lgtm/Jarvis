@@ -27,7 +27,7 @@ class GeminiLiveApp:
         self.root = root
         self.root.title("Gemini Live Local")
         self.root.geometry("600x500")
-        self.model = genai.GenerativeModel('gemini-1.5-flash')
+        self.model = genai.GenerativeModel('gemini-2.5-flash')
         
         self.chat_history = scrolledtext.ScrolledText(root, wrap=tk.WORD, state=tk.DISABLED)
         self.chat_history.pack(padx=10, pady=10, fill=tk.BOTH, expand=True)

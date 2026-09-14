@@ -136,7 +136,7 @@ def _perform_vision_analysis() -> str:
             raw_bytes = base64.b64decode(b64_image)
             
             response = client.models.generate_content(
-                model="gemini-1.5-flash",
+                model="gemini-2.5-flash",
                 contents=[
                     types.Content(parts=[
                         types.Part(text=query),
@@ -163,7 +163,7 @@ def _perform_vision_analysis() -> str:
         }
 
         payload = {
-            "model": "google/gemini-1.5-flash",
+            "model": "google/gemini-2.5-flash",
             "max_tokens": 150,
             "messages": [
                 {

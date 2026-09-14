@@ -19,7 +19,7 @@ def _load_config() -> dict:
     except Exception:
         return {}
 
-def openrouter_agent(query: str, model: str = "google/gemini-1.5-flash") -> str:
+def openrouter_agent(query: str, model: str = "google/gemini-2.5-flash") -> str:
     """
     Routes complex queries to either OpenRouter (Cloud) or Ollama (Local AI)
     based on user settings.

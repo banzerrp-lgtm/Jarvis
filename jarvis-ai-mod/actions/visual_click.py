@@ -117,7 +117,7 @@ def visual_click(parameters: dict, player=None) -> str:
         # Intentar llamada directa a la API de Gemini para máxima velocidad y baja latencia (gratis)
         if gemini_key:
             used_provider = "Gemini Directo"
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={gemini_key}"
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={gemini_key}"
             payload = {
                 "contents": [{
                     "parts": [
@@ -149,7 +149,7 @@ def visual_click(parameters: dict, player=None) -> str:
         elif openrouter_key:
             used_provider = "OpenRouter"
             payload = {
-                "model": "google/gemini-1.5-flash",
+                "model": "google/gemini-2.5-flash",
                 "max_tokens": 50,
                 "messages": [
                     {
