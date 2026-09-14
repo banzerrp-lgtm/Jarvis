@@ -1,0 +1,44 @@
+# Environments
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*$py.class
+
+# Config and Sensitive Files
+config/api_keys.json
+config/rules.json
+config/vision_guardian_state.json
+config/whatsapp_contacts.json
+config/hand_landmarker.task
+config/*.png
+config/*.jpg
+config/user_profile.json
+memory/*.json
+config/.spotify_cache
+config/vosk_model/
+custom_tools.json
+
+# Backups
+backups/
+
+# Logs
+*.log
+jarvis.log
+
+# Scratch scripts
+patch_main.py
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+s c r a t c h /  
+ 
